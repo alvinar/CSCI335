@@ -1,5 +1,3 @@
-You will use this exact Makefile for your Homework 2. If you need to change it, please consult with me first.
-
 You can compile everything by typing 
 
 make clean
@@ -15,4 +13,10 @@ make clean
 
 You delete all .o files and executables.
 
---Note that file avl_tree_modified.h is not provided.
+
+query_tree.cc can be compiled with ./query_tree rebase210.txt. "input_part2a.txt" is already included in the code
+on line 84 with "fin.open("input_part2a.txt") so there is no need to write it when compiling.
+
+test_tree.cc can be compiled with ./test_tree rebase210.txt sequences.txt
+
+test_tree_mod can be compiled with ./test_tree_mod rebase210.txt sequences.txt
