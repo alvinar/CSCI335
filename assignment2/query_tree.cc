@@ -1,5 +1,5 @@
 // Alvin Rosario
-// Main file for Part2(a) of Homework 2.
+// Main file for Part2(a) of Assignment 2.
 
 #include "avl_tree.h"
 #include "sequence_map.h"
@@ -46,10 +46,12 @@ AvlTree<SequenceMap> Parser(const string &db_filename)
 	string junk = "";
 	AvlTree<SequenceMap> sometree;
 	fin.open(db_filename);
+	
 	for (int x = 0; x < 10; x++) // skip the first 10 lines of the file
 	{
 	  getline(fin, junk);
 	}
+	
 	while (getline(fin, db_line)) // read the file line-by-line
 	{
 		string an_enz_acro = GetEnzymeAcronym(db_line); // first part of line
@@ -64,6 +66,7 @@ AvlTree<SequenceMap> Parser(const string &db_filename)
 		}
 	}
 	fin.close();
+	
 	return sometree;
 }
 
@@ -88,30 +91,37 @@ void QueryTree(const string &db_filename, TreeType &a_tree) {
 	getline(fin, aline2);
 	getline(fin, aline3);
 	SequenceMap result = a_tree.find(aline, flag);
+	
 	if (flag)
 	{
 		cout << result << endl;
 	}
+	
 	else
 	{
 		cout << "Not Found" << endl;
 	}
+	
 	flag = false;
 	result = a_tree.find(aline2, flag);
+	
 	if (flag)
 	{
 		cout << result << endl;
 	}
+	
 	else
 	{
 		cout << "Not Found" << endl;
 	}
 	flag = false;
+	
 	result = a_tree.find(aline3, flag);
 	if (flag)
 	{
 		cout << result << endl;
 	}
+	
 	else
 	{
 		cout << "Not Found" << endl;
