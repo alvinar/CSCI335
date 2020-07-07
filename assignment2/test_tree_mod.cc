@@ -1,5 +1,5 @@
 // Alvin Rosario
-// Main file for Part2(b) of Homework 2.
+// Main file for Part2(b) of Assignment 2.
 
 #include "avl_tree_modified.h"
 #include "sequence_map.h"
