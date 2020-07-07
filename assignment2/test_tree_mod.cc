@@ -30,6 +30,7 @@ bool GetNextRecognitionSequence(string &db_line, string &a_reco_seq)
 		return false; // a '/' means we got the last recognition sequence
 	}
 	a_reco_seq = "";
+	
 	for (int i = 0; db_line[i] != '/'; i++)
 	{
 		a_reco_seq += db_line[i];
