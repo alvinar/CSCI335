@@ -1,5 +1,5 @@
 // Alvin Rosario
-// Main File for Part 1 of Homework 2.
+// Main File for Part 1 of Assignment 2.
 
 #ifndef SEQUENCE_MAP_H
 #define SEQUENCE_MAP_H
@@ -61,16 +61,17 @@ class SequenceMap
 		for (int x = 0; x < y; x++)
 		{
 			if (x == y-1)
-	        {
+	        	{
 				os << sm.enzyme_acronyms_[x];
-	       	 }
-	        else
-	        {
+	       		}
+	        	else
+	        	{
 				os << sm.enzyme_acronyms_[x] << " ";
-	      	}
+	      		}
 		}
    		return os;
 	}
+	
 	// Function that pushes all of the enzyme acronyms of one objects into the vector of another object.
 	// Assumes other_sequence has the same recognition sequence as the item it is being pushed into.
 	void Merge(const SequenceMap &other_sequence)
@@ -81,6 +82,7 @@ class SequenceMap
 			enzyme_acronyms_.push_back(other_sequence.enzyme_acronyms_[x]);
 		}
 	}
+	
 	string getRecSeq()
 	{
 		return recognition_sequence_;
